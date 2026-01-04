@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import { Bricolage_Grotesque } from "next/font/google";
 
 const BingoDilan = localFont({
   src: "../public/fonts/BingoDilan-Regular.ttf",
@@ -12,6 +13,11 @@ const BingoDilan = localFont({
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+export const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["600"], // SemiBold
+  variable: "--font-bricolage",
 });
 
 const geistMono = Geist_Mono({
@@ -37,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${BingoDilan.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${BingoDilan.variable} ${bricolage.variable}`}
     >
       <body className={`antialiased bg-black text-white`}>{children}</body>
     </html>

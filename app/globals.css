@@ -4,6 +4,7 @@
 @theme inline {
   --font-bingo: var(--font-bingo);
   --font-poppins: var(--font-poppins);
+  --font-bricolage: var(--font-bricolage);
 }
 
 @utility font-bingo {
