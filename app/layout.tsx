@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
+
+const BingoDilan = localFont({
+  src: "../public/fonts/BingoDilan-Regular.ttf",
+  variable: "--font-bingo",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +17,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["600"], // SemiBold
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -23,12 +35,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${BingoDilan.variable}`}
+    >
+      <body className={`antialiased bg-black text-white`}>{children}</body>
     </html>
   );
 }
