@@ -3,8 +3,8 @@ import { main } from "motion/react-client";
 
 export default function ScrambledTextSection() {
   return (
-    <main className="flex flex-col items-center ">
-      <h1 className="text-2xl font-semibold font-bricolage">
+    <main className="flex flex-col items-center mt-[100px]">
+      <h1 className="text-2xl font-bricolage font-semibold">
         Principles That Define Our Approach
       </h1>
       <ScrambledText

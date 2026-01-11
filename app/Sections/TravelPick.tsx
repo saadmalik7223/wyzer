@@ -38,7 +38,7 @@ export default function CardSection() {
   }, []);
 
   return (
-    <main className="mx-[10%] mb-[150px]">
+    <main className="mx-[10%] mb-[150px] mt-[100px]">
       {" "}
       <h1 className="text-5xl  font-bricolage font-semibold">
         Wyzer <span className="text-[var(--primary-color)]">Travel</span>
